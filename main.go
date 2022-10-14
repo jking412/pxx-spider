@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/robfig/cron/v3"
 	"os"
 )
 
@@ -33,6 +34,14 @@ var FileBodyTemplate = `
 `
 
 func main() {
+	spiderPxx()
+	c := cron.New()
+	c.AddJob("@every 12h", cron.FuncJob(spiderPxx))
+	c.Start()
+	select {}
+}
+
+func spiderPxx() {
 	NewFirstSpider().Run()
 	NewSecondSpider().Run()
 	NewThirdSpider().Run()

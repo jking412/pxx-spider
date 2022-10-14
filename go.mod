@@ -8,6 +8,7 @@ require (
 	github.com/bitly/go-simplejson v0.5.0 // indirect
 	github.com/garyburd/redigo v1.6.4 // indirect
 	github.com/hu17889/go_spider v0.0.0-20150809033053-85ede20bf88b // indirect
+	github.com/robfig/cron/v3 v3.0.0 // indirect
 	golang.org/x/net v0.0.0-20221012135044-0b7e1fb9d458 // indirect
 	golang.org/x/text v0.3.7 // indirect
 )
